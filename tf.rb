@@ -5,21 +5,21 @@
 class Tf < Formula
   desc "Less verbose and more shell friendly Terraform"
   homepage "https://github.com/dex4er/tf"
-  version "2.11.0"
+  version "2.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dex4er/tf/releases/download/v2.11.0/tf-darwin-amd64"
-      sha256 "e981bcd23d2454cbce6f131d5dd3133ea9f7b953c6883590a8dc92640448a457"
+      url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-darwin-amd64"
+      sha256 "d259db4ccd4c239226e9fa821b7691daa46fa423af550fdfa6efd4833addf096"
 
       def install
         bin.install "tf-darwin-amd64" => "tf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dex4er/tf/releases/download/v2.11.0/tf-darwin-arm64"
-      sha256 "b98ce9802a2f71843f617932d1016da0a0feb345d1f53102d961febeac9f78bb"
+      url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-darwin-arm64"
+      sha256 "36b6a1c4902e989d8bc97bd5e59799a6bed91b74d1d0ff55847512d394af9d8c"
 
       def install
         bin.install "tf-darwin-arm64" => "tf"
@@ -30,8 +30,8 @@ class Tf < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dex4er/tf/releases/download/v2.11.0/tf-linux-amd64"
-        sha256 "eaf1372c6f6e53b386ce82a9933cf25490c6cf15dd4ad3f10522483710a4f9ce"
+        url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-linux-amd64"
+        sha256 "4d6078ad4bd3703be58b9d00cdd6807beebc91b080bab0e5f2fed2ca480b2ccc"
 
         def install
           bin.install "tf-linux-amd64" => "tf"
@@ -40,8 +40,8 @@ class Tf < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dex4er/tf/releases/download/v2.11.0/tf-linux-arm64"
-        sha256 "62537f532706a55d6cbc4fa071cdd5819df27598a3376990de445712c0bfc719"
+        url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-linux-arm64"
+        sha256 "b65e95191cbd254e3487c78e9289fcd5aeb61d4cf18f0e41a72f2d6738e4b0e2"
 
         def install
           bin.install "tf-linux-arm64" => "tf"
