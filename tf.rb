@@ -5,21 +5,21 @@
 class Tf < Formula
   desc "Less verbose and more shell friendly Terraform"
   homepage "https://github.com/dex4er/tf"
-  version "2.11.1"
+  version "2.11.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-darwin-amd64"
-      sha256 "d259db4ccd4c239226e9fa821b7691daa46fa423af550fdfa6efd4833addf096"
+      url "https://github.com/dex4er/tf/releases/download/v2.11.2/tf-darwin-amd64"
+      sha256 "49942a9c8e51653f80ab610b661ff2e0e85bd7be2ecac8b365ada5c1e7506029"
 
       def install
         bin.install "tf-darwin-amd64" => "tf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-darwin-arm64"
-      sha256 "36b6a1c4902e989d8bc97bd5e59799a6bed91b74d1d0ff55847512d394af9d8c"
+      url "https://github.com/dex4er/tf/releases/download/v2.11.2/tf-darwin-arm64"
+      sha256 "d320b3f46fc0a5142426f6e9f5e82f0b959e1d639b85afc82c9a69fe865d0f2d"
 
       def install
         bin.install "tf-darwin-arm64" => "tf"
@@ -28,24 +28,18 @@ class Tf < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-linux-amd64"
-        sha256 "4d6078ad4bd3703be58b9d00cdd6807beebc91b080bab0e5f2fed2ca480b2ccc"
-
-        def install
-          bin.install "tf-linux-amd64" => "tf"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dex4er/tf/releases/download/v2.11.2/tf-linux-amd64"
+      sha256 "9e6f8693d33d1fc4d3381a422b525cb9bd2f03aa85e0d1b304819b1f27fd9ae6"
+      def install
+        bin.install "tf-linux-amd64" => "tf"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dex4er/tf/releases/download/v2.11.1/tf-linux-arm64"
-        sha256 "b65e95191cbd254e3487c78e9289fcd5aeb61d4cf18f0e41a72f2d6738e4b0e2"
-
-        def install
-          bin.install "tf-linux-arm64" => "tf"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dex4er/tf/releases/download/v2.11.2/tf-linux-arm64"
+      sha256 "f18421d2222f36186b806840f3d17827e266a6e3d97f99a3daa65e335a4887c8"
+      def install
+        bin.install "tf-linux-arm64" => "tf"
       end
     end
   end
