@@ -5,21 +5,21 @@
 class Tf < Formula
   desc "Less verbose and more shell friendly Terraform"
   homepage "https://github.com/dex4er/tf"
-  version "2.12.1"
+  version "2.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dex4er/tf/releases/download/v2.12.1/tf-darwin-amd64"
-      sha256 "85395e5875334907f1e13e2ebad33d10f8a4a4d353455276255eca23dde29c3e"
+      url "https://github.com/dex4er/tf/releases/download/v2.13.0/tf-darwin-amd64"
+      sha256 "faeb76f8ab3ebbf32e3aa3cd498a272508b911fce4ab643d941ef607cd25c09c"
 
       define_method(:install) do
         bin.install "tf-darwin-amd64" => "tf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dex4er/tf/releases/download/v2.12.1/tf-darwin-arm64"
-      sha256 "6181efd9b711f42f54edeadeeeb4fbc19f8a7ba9a237a9279a7f4aa60d6b00f6"
+      url "https://github.com/dex4er/tf/releases/download/v2.13.0/tf-darwin-arm64"
+      sha256 "baab1a400ac756220ba8f90959d367b3f7dbeedffcf28f02de7e1a39aa6fbc20"
 
       define_method(:install) do
         bin.install "tf-darwin-arm64" => "tf"
@@ -29,15 +29,15 @@ class Tf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dex4er/tf/releases/download/v2.12.1/tf-linux-amd64"
-      sha256 "b7a211fdb4710362e59ecfdf4c17271af6e064af829daa2453a7938c6fbfad11"
+      url "https://github.com/dex4er/tf/releases/download/v2.13.0/tf-linux-amd64"
+      sha256 "92fa3d171bb7c5260f8497a0b2869e1fa02ccd232bc19c5779785ae35821f81d"
       define_method(:install) do
         bin.install "tf-linux-amd64" => "tf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dex4er/tf/releases/download/v2.12.1/tf-linux-arm64"
-      sha256 "7850f642686dd4e4a1ac35a9e58ff3139e8428ffdc62dd6f9cc7d116ff376f65"
+      url "https://github.com/dex4er/tf/releases/download/v2.13.0/tf-linux-arm64"
+      sha256 "337e60daf309841b4fe0c30623bc45bd015395db9eba53ad3692883d36879ec7"
       define_method(:install) do
         bin.install "tf-linux-arm64" => "tf"
       end
